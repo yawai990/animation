@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Transition</title>
+    <style type="text/css">
+        button {
+            width: 290px;
+            height: 90px;
+            background-color: blue;
+            color: #f4f4f4;
+            font-size: 25px;
+            border: none;
+            /* transition-property: width, background-color, color; */
+            /* if u want the transition effect in all property */
+            /* transition-property: all; */
+            /* transition-duration: 2s; */
+            /* transition: all 5s; */
+            /* transition: width 9s, background-color 6s, color 3s; */
+            /* transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease; */
+            transition: color 5s ease, background-color 5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+
+        button:hover {
+            /* width: 600px; */
+            background-color: yellow;
+            color: teal;
+
+            /* border-radius: 25px; */
+        }
+    </style>
+</head>
+
+<body>
+    <button>CSS Transition</button>
+</body>
+
+</html>

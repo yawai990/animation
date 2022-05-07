@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Effect</title>
+
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                background: rgb(35, 35, 126);
+
+                height: 100vh;
+                
+                display: flex;
+                justify-content:center;
+                align-items: center;
+            }
+            h1{
+                font-size:200px;
+                text-align: center;
+                background:url('./img/banner.png');
+
+                background-clip: text;
+                -webkit-background-clip: text;
+              
+                color: transparent;
+
+                /* animation-name: myani;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-timing-function:linear; */
+
+                -webkit-text-stroke: 3px blue;
+                animation: myani 20s infinite linear;
+            }
+            @keyframes myani {
+                from{
+                    background-position: 0 0;
+
+                }
+                to{
+                    background-position: 100% 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>CSS ANIMATION</h1>
+    </body>
+</html>

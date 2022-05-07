@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Icon Effect</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style type="text/css">
+        body{
+            height: 100vh;
+            background: #111;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .call{
+            width: 100px;
+            height: 100px;
+            background: green;
+            border-radius: 50%;
+            
+            color: #fff;
+            font-size: 48px;
+            text-align: center;
+            line-height: 100px;
+
+            position: relative;
+        }
+        .call::before,
+        .call::after{
+            content: '';
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            border-radius: 50%;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+
+            box-sizing: border-box;
+
+            animation: myani 2s infinite linear;
+        }
+        .call::after{
+            animation-delay: 0.7s;
+        }
+        @keyframes myani {
+            0%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1.5);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        
+        <div class="call">
+            <i class="fas fa-phone"></i>
+        </div>
+
+    </body>
+</html>

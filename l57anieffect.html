@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                background: #222;
+                height: 100vh;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                
+                display: flex;
+            }
+            ul li{
+                color: #484848;
+                font-size: 4rem;
+                letter-spacing: 15px;
+
+                animation: myani 1.4s linear infinite;
+            }
+            ul li:nth-child(2){
+                animation-delay: 0.1s;
+            }
+            ul li:nth-child(3){
+                animation-delay: 0.2s;
+            }
+            ul li:nth-child(4){
+                animation-delay: 0.3s;
+            }
+            ul li:nth-child(5){
+                animation-delay: 0.4s;
+            }
+            ul li:nth-child(6){
+                animation-delay: 0.5s;
+            }
+            ul li:nth-child(7){
+                animation-delay: 0.6s;
+            }
+            ul li:nth-child(8){
+                animation-delay: 0.8s;
+            }
+            @keyframes myani {
+                0%{
+                    color: #484848;
+                    text-shadow: none;
+                }
+                90%{
+                    color: #484848;
+                    text-shadow: none;
+                }
+                100%{
+                    color: yellow;
+                    text-shadow: 0 0 7px yellow,
+                                0 0 50px tomato;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <ul>
+            <li>D</li>
+            <li>A</li>
+            <li>T</li>
+            <li>A</li>
+            <li>L</li>
+            <li>A</li>
+            <li>N</li>
+            <li>D</li>
+        </ul>
+    </body>
+</html>

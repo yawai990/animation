@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Loader effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color:rgba(46, 46, 250, 0.637);
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{ 
+                font-size: 40px;
+                color: transparent;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                -webkit-text-stroke: 1px white;
+
+                margin: 0;
+                padding: 0;
+
+                position: relative;
+                
+            }
+            h1::before{
+                content: 'loading.......';
+                width: 0%;
+                color:orange;
+                border-right: 4px solid orange;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                overflow: hidden;
+
+                animation: myani 5s infinite linear;
+            }
+            @keyframes myani {
+                0%{
+                    width: 0;
+                }
+                50%{
+                    width: 100%;
+                }
+                100%{
+                    width: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Loading.......</h1>
+
+    </body>
+</html>

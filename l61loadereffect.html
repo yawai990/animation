@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loader effect</title>
+        <style type="text/css">
+
+            body{
+                height: 100vh;
+                background: skyblue;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                perspective: 200px;
+            }
+            .loader{
+                width: 80px;
+                height: 80px;
+                background: #f4f4f4;
+                border-radius: 10px;
+
+                animation: myani 2s linear infinite;
+            }
+            @keyframes myani {
+                0%{
+                    /* transform: rotate(0); */
+                    transform: rotateX(0) rotateY(0);
+                }
+                50%{
+                    transform: rotateY(180deg);
+                    /* transform: rotateX(0) rotateY(180deg); */
+                }
+                100%{
+                    transform: rotateZ(180deg);
+                    /* transform: rotateX(180deg) rotateY(180deg); */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="loader"></div>
+
+    </body>
+</html>

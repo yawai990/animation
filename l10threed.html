@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3D</title>
+    <style type="text/css">
+        * {
+            perspective: 1000px;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 200px;
+            background: red;
+            transition: all 0.5s;
+        }
+
+        img:hover {
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img/own.png" alt="own" />
+</body>
+
+</html>

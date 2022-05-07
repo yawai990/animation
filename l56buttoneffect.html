@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Ani Effect</title>
+        <style type="text/css">
+            body{
+                height: 100vh;
+                background-color: #222;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                font-family:sans-serif;
+            }
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 40px;
+                border: 3px solid #fff;
+                
+                padding: 40px 80px;
+
+                position: relative;
+
+                overflow: hidden;
+            }
+            a::before{
+                content: '';
+                width: 120px;
+                height: 100%;
+                background-color: tomato;
+                
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transition:all 0.3s;
+
+                z-index: -1;
+
+                transform: skew(-20deg) translateX(-100%);
+                animation: myani 2s linear infinite;
+            }
+            a:hover::before{
+                width: 100%;
+                transform: skew(0);
+                animation: none;
+            }
+            @keyframes myani {
+                from{
+                   left: -120px;
+                }
+                to{
+                   left: 120%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">Hover ME</a>
+    </body>
+</html>

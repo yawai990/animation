@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3D Perspective</title>
+    <style type="text/css">
+        * {
+            perspective: 500px;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 200px;
+            transition: all 1s;
+        }
+
+        img:hover {
+            /* transform: rotateX(40deg); */
+            /* transform: rotateZ(40deg); */
+            /* transform: rotateX(90deg); */
+            /* transform: rotateY(60deg); */
+            transform: rotateY(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img/own.png" alt="own" />
+</body>
+
+</html>

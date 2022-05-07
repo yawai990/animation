@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Image Effext
+        </title>
+
+        <style type="text/css">
+        body{
+            height: 100vh;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #222;
+        }
+        .container{
+            width: 500px;
+            height: 300px;
+            
+            border: 8px solid white;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+        .container::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            background: rgb(14, 173, 173);
+
+            transform: translateY(-110%);
+
+            transition: all 0.2s;
+            
+        }
+        img{
+            width: 100%;
+            height: 100%;
+
+            transition: all 0.2s;
+
+        }
+        .caption{
+            width: inherit;
+            height: inherit;
+
+            text-align: center;
+            text-transform: uppercase;
+    
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .caption h1{
+            width: inherit;
+            padding: 20px;
+
+            background: rgba(0, 0, 0, 0.39);
+
+            transform: translateY(-400px);
+
+            transition: all 0.2s;
+        }
+        .caption p{
+            width: 80%;
+
+            transform: translateY(-400px);
+
+            transition: all 0.2s;
+        }
+        .caption a{
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+
+            background: black;
+
+            transform: translateY(-400px);
+
+            transition: all 0.2s;
+        }
+        .container:hover::before{
+            transform: translateY(0%);
+            transition-delay: 0.25s;
+        }
+        .container:hover img{
+            transform:  rotate(1turn) scale(0);
+        }
+        .container:hover h1{
+            transform: translateY(0px);
+            transition-delay: 0.5s;
+        }
+        .container:hover p{
+            transform: translateY(0px);
+            transition-delay: 0.4s;
+        }
+        .container:hover a{
+            transform: translateY(0px);
+            transition-delay: 0.3s;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="./img/webdep.jpg" alt="web"/>
+            <div class="caption">
+                <h1>How Sweet !</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate magni illo corporis nam porro, ab minima expedita maxime repellat distinctio?</p>
+
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </body>
+</html>

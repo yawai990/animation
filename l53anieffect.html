@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Effect</title>
+        <style type="text/css">
+           
+            .banner{
+                height: 100vh;
+                
+                background: url('./img/banner.png');
+
+                /* animation: myani 15s infinite linear; */
+
+                animation-name: myani;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes myani {
+               0%{
+                    background-position: 0 0;
+                }
+                100%{
+                    background-position: -600px -600px;
+                }
+             
+            }
+        </style>
+        <body>
+            <div class="banner"></div>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Social Effect</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style type="text/css">
+            body{
+                height: 100vh;
+                background-color: #999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                display: flex;
+                
+                text-align: center;
+            }
+            .icon{
+                width: 90px;
+                height: 90px;
+                background-color: #f1f1f1;
+                color: green;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.452);
+                border-radius: 30%;
+                text-decoration: none;
+
+                margin: 10px;
+
+                position: relative;
+
+                overflow: hidden;
+
+            }
+            .icon i{
+                font-size: 25px;
+                line-height: 90px;
+                transition: all 0.2s;
+            }
+            .icon:hover i{
+                color: white;
+                transform: scale(1.5);
+            }
+            .icon::before{
+                content: '';
+                width: 130%;
+                height: 130%;
+                background: green;
+
+                position: absolute;
+                top: 90%;
+                left: -120%;
+
+                /* z-index: -1; */
+                
+
+                transform: rotate(45deg);
+                transition: all 0.2s;
+            }
+            .icon:hover::before{
+                animation: myani 0.5s linear;
+                animation-fill-mode: forwards;
+            }
+            @keyframes myani {
+                0%{
+                    top: 90%;
+                    left: -120%;
+                }
+                50%{
+                    top: -30%;
+                    left: 9%;
+                }
+                100%{
+                    top: -10%;
+                    left: -15%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-google"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </body>
+</html>
